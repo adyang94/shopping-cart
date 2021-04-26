@@ -4,7 +4,7 @@ function ProductList () {
   return (
     <div>
       <p>
-        Product List
+        Product Listt
       </p>
     </div>
   );
