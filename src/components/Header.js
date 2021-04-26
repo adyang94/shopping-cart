@@ -9,15 +9,9 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 function Header () {
 
   return(
-    <div>
+    <div style = {{color: "white"}}>
       
-      <BrowserRouter>
-      <ul>
-        
-      </ul>
-      </BrowserRouter>
-      <ul>
-      </ul>
+      HEADER
     </div>
   )
 }

@@ -1,5 +1,5 @@
 html {
-  background-color: black;
+  
 }
 .welcomePageCtn {
   display: grid;
@@ -53,7 +53,7 @@ html {
 }
 
 .navLine {
-  background: white;
+  background: rgb(0, 0, 0);
   margin: 5px;
   padding: 2px;
   width: 30px;

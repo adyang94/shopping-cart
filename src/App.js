@@ -22,6 +22,7 @@ function App() {
     sidebar.classList.add('sidebarOpen');
   }
   // const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [displayedName, setdisplayedName] = useState("HOME")
   
   return (
     <div>
@@ -34,17 +35,38 @@ function App() {
         </div>
 
         <div id = 'sidebar' className = 'sidebarClose' >
-          <Link to ="/">Homepage</Link>
+          <Link to ="/" onClick = {() => {
+            closeSidebar();
+            setdisplayedName("HOMEPAGE")}} >
+            Homepage
+          </Link>
           <br/>
-          <Link to = "/productlist">Product List</Link>
+
+          <Link to = "/productlist" onClick = {() => {
+            closeSidebar();
+            setdisplayedName("PRODUCT LIST")}} >
+            Product List
+          </Link>
           <br/>
-          <Link to = "/checkout">Checkout</Link>
+
+          <Link to = "/checkout" onClick = {() => {
+            closeSidebar();
+            setdisplayedName("CHECKOUT")}} >
+            Checkout
+          </Link>
           <br/>
-          <Link to= "/productpage">Product Page</Link>
+
+          <Link to= "/productpage" onClick = {() => {
+            closeSidebar();
+            setdisplayedName("PRODUCT PAGE")}} >
+            Product Page
+          </Link>
           <br/>
+
           <button className = 'closeSidebarBtn' onClick = {closeSidebar}>&times;</button>
         </div>
         <Header />
+        <div >{displayedName}</div>
         <Switch>
           <Route exact path = '/' component = {WelcomePage} />
           <Route exact path = '/productlist' component = {ProductList} />
