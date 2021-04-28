@@ -1,17 +1,19 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import React, {Components, useState} from 'react';
+
 // import WelcomePage from './components/WelcomePage';
 // import ProductList from './components/ProductList';
 // import ProductPage from './components/ProductPage';
 // import Checkout from './components/Checkout';
 
 
-function Header () {
+function Header (props) {
+  
 
   return(
-    <div style = {{color: "white"}}>
+    <div className = 'headerCtn'>
       
-      HEADER
+      {props.displayedName}
+      
     </div>
   )
 }

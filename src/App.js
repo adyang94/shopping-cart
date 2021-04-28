@@ -11,6 +11,8 @@ import Header from './components/Header';
 
 function App() {
   
+  const [displayedName, setdisplayedName] = useState("WELCOME PACER'S FANS");
+  
   const closeSidebar = () => {
     const sidebar = document.querySelector('#sidebar');
     sidebar.classList.remove('sidebarOpen');
@@ -22,10 +24,9 @@ function App() {
     sidebar.classList.add('sidebarOpen');
   }
   // const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [displayedName, setdisplayedName] = useState("HOME")
   
   return (
-    <div>
+    <div className = 'page'>
       
       <BrowserRouter>
         <div class="toggleContainer" style = {{cursor: "pointer"}} onClick = {openSidebar}>
@@ -35,9 +36,9 @@ function App() {
         </div>
 
         <div id = 'sidebar' className = 'sidebarClose' >
-          <Link to ="/" onClick = {() => {
+          <Link to ="/welcomepage" onClick = {() => {
             closeSidebar();
-            setdisplayedName("HOMEPAGE")}} >
+            setdisplayedName("WELCOME PACER'S FANS")}} >
             Homepage
           </Link>
           <br/>
@@ -65,10 +66,14 @@ function App() {
 
           <button className = 'closeSidebarBtn' onClick = {closeSidebar}>&times;</button>
         </div>
-        <Header />
-        <div >{displayedName}</div>
+        <div className = 'header'>
+          <Header 
+            displayedName = {displayedName}
+          />
+
+        </div>
         <Switch>
-          <Route exact path = '/' component = {WelcomePage} />
+          <Route exact path = '/welcomepage' component = {WelcomePage} />
           <Route exact path = '/productlist' component = {ProductList} />
           <Route exact path = '/productpage' component = {ProductPage} />
           <Route exact path = '/checkout' component = {Checkout} />
