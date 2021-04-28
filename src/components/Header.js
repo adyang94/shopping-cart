@@ -1,22 +1,40 @@
 /* eslint-disable react/prop-types */
-import React, { Components, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Header(props) {
   const { displayedName } = props;
-  const header = document.querySelector('.header');
+  const [backgroundColor, setBackgroundColor] = useState('rgba(0, 45, 98)');
+  const [fontColor, setFontColor] = useState('rgba(253, 187, 48)');
 
-  switch (displayedName) {
-    case 'WELCOME PACER\'S FANS':
-
-      header.style.backgroundColor = 'rgba(0, 45, 98)';
-      break;
-    default:
-
-      header.style.backgroundColor = 'blue';
-  }
+  useEffect(() => {
+    switch (displayedName) {
+      case 'WELCOME PACER\'S FANS':
+        setFontColor('rgba(253, 187, 48)');
+        setBackgroundColor('rgba(0, 45, 98)');
+        break;
+      case 'CHECKOUT':
+        setFontColor('rgba(0, 45, 98)');
+        setBackgroundColor('rgba(253, 187, 48)');
+        break;
+      case 'PRODUCT PAGE':
+        setFontColor('rgba(253, 187, 48)');
+        setBackgroundColor('rgba(0, 45, 98)');
+        break;
+      default:
+        setFontColor('rgba(0, 45, 98)');
+        setBackgroundColor('rgba(253, 187, 48)');
+        break;
+    }
+  });
 
   return (
-    <div className="header">
+    <div
+      className="header"
+      style={{
+        color: `${fontColor}`,
+        backgroundColor: `${backgroundColor}`,
+      }}
+    >
 
       {displayedName}
 
