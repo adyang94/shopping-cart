@@ -1,4 +1,4 @@
-BrowserRouter {
+.body {
   display: grid;
   grid-template-columns: 5% 90% 5%;
   grid-template-rows: 10% 80% 10%;
@@ -60,12 +60,11 @@ BrowserRouter {
   width: 30px;
   height: 3px;
 }
-Header {
+
+.headerCtn {
   display: grid;
   grid-column: 2/3;
   grid-row: 1/2;
-}
-.headerCtn {
   font-size: 2.5rem;
   letter-spacing: 5px;
   text-align: center;
@@ -73,8 +72,7 @@ Header {
   max-height: 100px;
   
 }
-Switch {
-  
+.switch {  
   grid-row: 2/4;
   grid-column: 2/3;
 }

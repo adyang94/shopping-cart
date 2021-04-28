@@ -1,21 +1,27 @@
-import React, {Components, useState} from 'react';
+/* eslint-disable react/prop-types */
+import React, { Components, useState } from 'react';
 
-// import WelcomePage from './components/WelcomePage';
-// import ProductList from './components/ProductList';
-// import ProductPage from './components/ProductPage';
-// import Checkout from './components/Checkout';
+function Header(props) {
+  const { displayedName } = props;
+  const header = document.querySelector('.header');
 
+  switch (displayedName) {
+    case 'WELCOME PACER\'S FANS':
 
-function Header (props) {
-  
+      header.style.backgroundColor = 'rgba(0, 45, 98)';
+      break;
+    default:
 
-  return(
-    <div className = 'headerCtn'>
-      
-      {props.displayedName}
-      
+      header.style.backgroundColor = 'blue';
+  }
+
+  return (
+    <div className="header">
+
+      {displayedName}
+
     </div>
-  )
+  );
 }
 
 export default Header;

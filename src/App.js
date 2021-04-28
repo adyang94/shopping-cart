@@ -34,9 +34,11 @@ function App() {
             <div className="navLine" />
             <div className="navLine" />
           </div>
-          <Header
-            displayedName={displayedName}
-          />
+          <div className="headerCtn">
+            <Header
+              displayedName={displayedName}
+            />
+          </div>
           <div id="sidebar" className="sidebarClose">
             <Link
               to="/welcomepage"
@@ -85,12 +87,14 @@ function App() {
             <button type="button" className="closeSidebarBtn" onClick={closeSidebar}>&times;</button>
           </div>
 
-          <Switch>
-            <Route exact path="/welcomepage" component={WelcomePage} />
-            <Route exact path="/productlist" component={ProductList} />
-            <Route exact path="/productpage" component={ProductPage} />
-            <Route exact path="/checkout" component={Checkout} />
-          </Switch>
+          <div className="switch">
+            <Switch>
+              <Route exact path="/welcomepage" component={WelcomePage} />
+              <Route exact path="/productlist" component={ProductList} />
+              <Route exact path="/productpage" component={ProductPage} />
+              <Route exact path="/checkout" component={Checkout} />
+            </Switch>
+          </div>
         </div>
 
       </BrowserRouter>
