@@ -12,17 +12,26 @@ function Header(props) {
         setFontColor('rgba(253, 187, 48)');
         setBackgroundColor('rgba(0, 45, 98)');
         break;
+      case 'PRODUCT LIST':
+        setFontColor('rgba(253, 187, 48)');
+        setBackgroundColor('rgba(0, 45, 98)');
+        break;
       case 'CHECKOUT':
         setFontColor('rgba(0, 45, 98)');
         setBackgroundColor('rgba(253, 187, 48)');
+        console.log('checkout');
+        console.log('-------');
         break;
       case 'PRODUCT PAGE':
         setFontColor('rgba(253, 187, 48)');
         setBackgroundColor('rgba(0, 45, 98)');
+        console.log('product page');
+        console.log('-------');
         break;
       default:
         setFontColor('rgba(0, 45, 98)');
         setBackgroundColor('rgba(253, 187, 48)');
+        console.log('hi---');
         break;
     }
   });
