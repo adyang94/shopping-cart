@@ -60,10 +60,10 @@ BrowserRouter {
   width: 30px;
   height: 3px;
 }
-.header {
-  
+Header {
+  display: grid;
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 1/2;
 }
 .headerCtn {
   font-size: 2.5rem;
