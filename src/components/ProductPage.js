@@ -8,6 +8,6 @@ function ProductPage() {
       </p>
     </div>
   );
-};
+}
 
 export default ProductPage;

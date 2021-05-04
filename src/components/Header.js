@@ -8,7 +8,7 @@ function Header(props) {
 
   useEffect(() => {
     switch (displayedName) {
-      case 'WELCOME PACER\'S FANS':
+      case "WELCOME PACER'S FANS":
         setFontColor('rgba(253, 187, 48)');
         setBackgroundColor('rgba(0, 45, 98)');
         break;

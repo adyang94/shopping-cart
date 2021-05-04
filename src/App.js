@@ -26,10 +26,9 @@ function App() {
 
   return (
     <div>
-
       <BrowserRouter>
         <div className="body">
-          <div className="toggleContainer" style={{ cursor: 'pointer' }} onClick={openSidebar}>
+          <div className="toggleContainer" onClick={openSidebar} onKeyDown={openSidebar} role="button" tabIndex="0">
             <div className="navLine" />
             <div className="navLine" />
             <div className="navLine" />
@@ -41,7 +40,7 @@ function App() {
           </div>
           <div id="sidebar" className="sidebarClose">
             <Link
-              to="/welcomepage"
+              to="/"
               onClick={() => {
                 closeSidebar();
                 setdisplayedName("WELCOME PACER'S FANS");
@@ -89,7 +88,7 @@ function App() {
 
           <div className="switch">
             <Switch>
-              <Route exact path="/welcomepage" component={WelcomePage} />
+              <Route exact path="/" component={WelcomePage} />
               <Route exact path="/productlist" component={ProductList} />
               <Route exact path="/productpage" component={ProductPage} />
               <Route exact path="/checkout" component={Checkout} />

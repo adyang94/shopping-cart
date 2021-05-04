@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Checkout () {
+function Checkout() {
   return (
     <div>
       <p>
@@ -8,6 +8,6 @@ function Checkout () {
       </p>
     </div>
   );
-};
+}
 
 export default Checkout;

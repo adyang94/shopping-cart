@@ -4,7 +4,9 @@ function WelcomePage() {
   return (
     <div className="welcomePageCtn">
 
-      <div className="logo" />
+      <div className="logo">
+        <img src="./" />
+      </div>
     </div>
   );
 }

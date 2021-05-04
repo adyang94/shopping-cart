@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProductList () {
+function ProductList() {
   return (
     <div>
       <p>
@@ -8,6 +8,6 @@ function ProductList () {
       </p>
     </div>
   );
-};
+}
 
 export default ProductList;
