@@ -26,13 +26,13 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <div className="toggleContainer" onClick={openSidebar} onKeyDown={openSidebar} role="button" tabIndex="0">
+        <div className="navLine" />
+        <div className="navLine" />
+        <div className="navLine" />
+      </div>
+      <BrowserRouter className="hi">
         <div className="body">
-          <div className="toggleContainer" onClick={openSidebar} onKeyDown={openSidebar} role="button" tabIndex="0">
-            <div className="navLine" />
-            <div className="navLine" />
-            <div className="navLine" />
-          </div>
           <div className="headerCtn">
             <Header
               displayedName={displayedName}
