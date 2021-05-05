@@ -13,6 +13,5 @@ const items = [
     price: '50',
     img: '../assets/Sabonis.jpg',
   },
-
 ];
 export default items;
