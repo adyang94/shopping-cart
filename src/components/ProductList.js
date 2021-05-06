@@ -1,13 +1,27 @@
 import React from 'react';
-import items from 'Items.js';
+import items from './products';
+// import Items from './Items';
 
 function ProductList() {
+  const productListt = () => (
+    <div>
+      product listt
+    </div>
+  );
   return (
     <div className="productListPage">
       <p>
         Product Listt
       </p>
-      <div className="productListCtn" />
+      <div className="productListCtn">
+        {items[0].name}
+        <br />
+        {items[0].description}
+        <br />
+        {items[0].price}
+
+        {items.map(() => productListt)}
+      </div>
     </div>
   );
 }
