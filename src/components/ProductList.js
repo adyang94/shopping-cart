@@ -1,5 +1,7 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 import items from './products';
+
 // import Items from './Items';
 
 function ProductList() {

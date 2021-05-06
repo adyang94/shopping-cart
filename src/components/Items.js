@@ -1,13 +1,10 @@
-// import React from 'react';
+import React from 'react';
 
-// function Items(props) {
-//   console.log(props);
-//   const { item } = props;
-
-//   return (
-//     <div>
-//       {item.name}
-//     </div>
-//   );
-// }
-// export default Items;
+function Items() {
+  return (
+    <div>
+      hi
+    </div>
+  );
+}
+export default Items;
