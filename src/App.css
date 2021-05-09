@@ -90,3 +90,7 @@
   margin: 0;
   padding: 0;
 }
+.product img {
+  height: 100px;
+  width: 100px;
+}

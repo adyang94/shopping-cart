@@ -5,8 +5,8 @@ import items from './products';
 // import Items from './Items';
 
 function ProductList() {
-  const productListt = (item) => (
-    <div>
+  const productList = (item) => (
+    <div className="product">
       Product List
       <br />
       {item.name}
@@ -15,15 +15,14 @@ function ProductList() {
       <br />
       {item.price}
       <br />
-      <img alt={`${item.name}`} src={item.img} />
+      <img className="productImg" alt={`${item.name}`} src={item.img} />
     </div>
   );
   return (
     <div className="productListPage">
 
       <div className="productListCtn">
-        <img src="../assets/Sabonis.jpg" alt="Sabonis" />
-        {items.map((item) => productListt(item))}
+        {items.map((item) => productList(item))}
       </div>
     </div>
   );
