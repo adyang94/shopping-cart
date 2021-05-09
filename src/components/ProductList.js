@@ -12,7 +12,10 @@ function ProductList() {
       </h3>
       <img className="productImg" alt={`${item.name}`} src={item.img} />
       <br />
-      {item.price}
+      <div>
+        {item.price}
+
+      </div>
     </div>
   );
   return (
