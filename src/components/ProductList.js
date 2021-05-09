@@ -7,21 +7,22 @@ import items from './products';
 function ProductList() {
   const productList = (item) => (
     <div className="product">
-      Product List
-      <br />
-      {item.name}
-      <br />
-      {item.description}
+      <h3>
+        {item.name}
+      </h3>
+      <img className="productImg" alt={`${item.name}`} src={item.img} />
       <br />
       {item.price}
-      <br />
-      <img className="productImg" alt={`${item.name}`} src={item.img} />
     </div>
   );
   return (
     <div className="productListPage">
 
       <div className="productListCtn">
+        <h3>
+          Product&rsquo;s Carousal:
+        </h3>
+
         {items.map((item) => productList(item))}
       </div>
     </div>
