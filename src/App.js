@@ -31,7 +31,7 @@ function App() {
         <div className="navLine" />
         <div className="navLine" />
       </div>
-      <BrowserRouter className="hi">
+      <BrowserRouter>
         <div className="body">
           <div className="headerCtn">
             <Header
