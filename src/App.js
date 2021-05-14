@@ -45,6 +45,7 @@ function App() {
                 closeSidebar();
                 setdisplayedName("WELCOME PACER'S FANS");
               }}
+              id="sidebarHomepage"
             >
               Homepage
             </Link>
@@ -56,6 +57,7 @@ function App() {
                 closeSidebar();
                 setdisplayedName('PRODUCT LIST');
               }}
+              id="sidebarProductlist"
             >
               Product List
             </Link>
