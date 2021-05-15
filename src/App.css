@@ -162,3 +162,28 @@
   width: 35px;
   height: 35px;
 }
+
+/* CHECKOUT PAGE--------------------------------- */
+
+.checkoutCtn {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.shippingInfoCtn {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shippingInfoCtn input {
+  width: 100%;
+}
+.paymentCtn {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.paymentCtn input {
+  width: 100%;
+}
