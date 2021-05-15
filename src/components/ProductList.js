@@ -23,16 +23,15 @@ function ProductList({ addToCart, numItems }) {
     <div className="productListPage">
 
       <div className="cartIcon">
+        {numItems}
         <img id="cartPic" alt="cart" src="../assets/cartIcon.jpg" />
         <br />
-        {numItems}
       </div>
 
       <div className="productListCtn">
         <h3>
           Product&rsquo;s Carousal:
         </h3>
-
         {items.map((item) => productList(item))}
       </div>
     </div>
