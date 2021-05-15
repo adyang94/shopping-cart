@@ -1,16 +1,18 @@
 import './App.css';
 import React, { useState } from 'react';
 import {
-  BrowserRouter, Switch, Route, Link,
+  BrowserRouter, Switch, Route,
 } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import ProductList from './components/ProductList';
 import ProductPage from './components/ProductPage';
 import Checkout from './components/Checkout';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 function App() {
   const [displayedName, setdisplayedName] = useState("WELCOME PACER'S FANS");
+  const [cartItems, setCartItems] = useState(new Array(5).fill(0));
 
   const closeSidebar = () => {
     const sidebar = document.querySelector('#sidebar');
@@ -22,7 +24,17 @@ function App() {
     sidebar.classList.remove('sidebarClose');
     sidebar.classList.add('sidebarOpen');
   };
+  const addToCart = (itemID) => {
+    console.log(cartItems);
+    console.log(`itemID: ${itemID}`);
+    const newArr = [...cartItems];
+    newArr[itemID] += 1;
+    setCartItems(newArr);
+    console.log(cartItems);
+  };
   // const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  console.log(cartItems);
 
   return (
     <div>
@@ -38,60 +50,24 @@ function App() {
               displayedName={displayedName}
             />
           </div>
-          <div id="sidebar" className="sidebarClose">
-            <Link
-              to="/"
-              onClick={() => {
-                closeSidebar();
-                setdisplayedName("WELCOME PACER'S FANS");
-              }}
-              id="sidebarHomepage"
-            >
-              Homepage
-            </Link>
-            <br />
-
-            <Link
-              to="/productlist"
-              onClick={() => {
-                closeSidebar();
-                setdisplayedName('PRODUCT LIST');
-              }}
-              id="sidebarProductlist"
-            >
-              Product List
-            </Link>
-            <br />
-
-            <Link
-              to="/checkout"
-              onClick={() => {
-                closeSidebar();
-                setdisplayedName('CHECKOUT');
-              }}
-            >
-              Checkout
-            </Link>
-            <br />
-
-            <Link
-              to="/productpage"
-              onClick={() => {
-                closeSidebar();
-                setdisplayedName('PRODUCT PAGE');
-              }}
-            >
-              Product Page
-            </Link>
-            <br />
-
-            <button type="button" className="closeSidebarBtn" onClick={closeSidebar}>&times;</button>
-          </div>
+          <Sidebar
+            closeSidebar={closeSidebar}
+            setdisplayedName={setdisplayedName}
+          />
 
           <div className="switch">
             <Switch>
               <Route exact path="/" component={WelcomePage} />
-              <Route exact path="/productlist" component={ProductList} />
+              <Route
+                exact
+                path="/productlist"
+                render={() => (
+                  <ProductList
+                    addToCart={addToCart}
+                  />
+
+                )}
+              />
               <Route exact path="/productpage" component={ProductPage} />
               <Route exact path="/checkout" component={Checkout} />
             </Switch>

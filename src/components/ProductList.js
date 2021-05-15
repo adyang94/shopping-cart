@@ -1,20 +1,22 @@
+/* eslint-disable react/prop-types */
+
 import React from 'react';
-// import PropTypes from 'prop-types';
 import items from './products';
 
-// import Items from './Items';
-
-function ProductList() {
+function ProductList({ addToCart }) {
   const productList = (item) => (
     <div className="product">
-      <h3>
+      <h3 id="productItemName">
         {item.name}
       </h3>
       <img className="productImg" alt={`${item.name}`} src={item.img} />
       <br />
-      <div>
+      <div id="productItemPrice">
         {item.price}
 
+      </div>
+      <div id="addToCartBtn">
+        <button type="button" onClick={() => (addToCart(item.id))}>Add to Cart</button>
       </div>
     </div>
   );
