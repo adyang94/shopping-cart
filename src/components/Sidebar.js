@@ -31,17 +31,6 @@ function Sidebar({ closeSidebar, setdisplayedName }) {
       <br />
 
       <Link
-        to="/checkout"
-        onClick={() => {
-          closeSidebar();
-          setdisplayedName('CHECKOUT');
-        }}
-      >
-        Checkout
-      </Link>
-      <br />
-
-      <Link
         to="/productpage"
         onClick={() => {
           closeSidebar();
@@ -49,6 +38,17 @@ function Sidebar({ closeSidebar, setdisplayedName }) {
         }}
       >
         Product Page
+      </Link>
+      <br />
+
+      <Link
+        to="/checkout"
+        onClick={() => {
+          closeSidebar();
+          setdisplayedName('CHECKOUT');
+        }}
+      >
+        Checkout
       </Link>
       <br />
 

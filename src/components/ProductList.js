@@ -3,7 +3,7 @@
 import React from 'react';
 import items from './products';
 
-function ProductList({ addToCart }) {
+function ProductList({ addToCart, numItems }) {
   const productList = (item) => (
     <div className="product">
       <h3 id="productItemName">
@@ -22,6 +22,10 @@ function ProductList({ addToCart }) {
   );
   return (
     <div className="productListPage">
+
+      <div className="cartIcon">
+        {numItems}
+      </div>
 
       <div className="productListCtn">
         <h3>

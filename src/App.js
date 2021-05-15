@@ -13,6 +13,7 @@ import Sidebar from './components/Sidebar';
 function App() {
   const [displayedName, setdisplayedName] = useState("WELCOME PACER'S FANS");
   const [cartItems, setCartItems] = useState(new Array(5).fill(0));
+  const [numItems, setNumItems] = useState(0); // number of items in cart
 
   const closeSidebar = () => {
     const sidebar = document.querySelector('#sidebar');
@@ -30,7 +31,9 @@ function App() {
     const newArr = [...cartItems];
     newArr[itemID] += 1;
     setCartItems(newArr);
+    setNumItems(newArr.reduce((acc, val) => (acc + val)));
     console.log(cartItems);
+    console.log(`numItems: ${numItems}`);
   };
   // const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -64,6 +67,7 @@ function App() {
                 render={() => (
                   <ProductList
                     addToCart={addToCart}
+                    numItems={numItems}
                   />
 
                 )}
