@@ -13,7 +13,6 @@ function ProductList({ addToCart, numItems }) {
       <br />
       <div id="productItemPrice">
         {item.price}
-
       </div>
       <div id="addToCartBtn">
         <button type="button" onClick={() => (addToCart(item.id))}>Add to Cart</button>
@@ -24,6 +23,8 @@ function ProductList({ addToCart, numItems }) {
     <div className="productListPage">
 
       <div className="cartIcon">
+        <img id="cartPic" alt="cart" src="../assets/cartIcon.jpg" />
+        <br />
         {numItems}
       </div>
 
