@@ -9,7 +9,11 @@ function ProductList({ addToCart, numItems }) {
       <h3 id="productItemName">
         {item.name}
       </h3>
-      <img className="productImg" alt={`${item.name}`} src={item.img} />
+      <img
+        className="productImg"
+        alt={`${item.name}`}
+        src={item.img}
+      />
       <br />
       <div id="productItemPrice">
         {item.price}

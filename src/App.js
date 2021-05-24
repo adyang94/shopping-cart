@@ -37,8 +37,6 @@ function App() {
   };
   // const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  console.log(cartItems);
-
   return (
     <div>
       <div className="toggleContainer" onClick={openSidebar} onKeyDown={openSidebar} role="button" tabIndex="0">
