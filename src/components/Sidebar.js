@@ -31,17 +31,6 @@ function Sidebar({ closeSidebar, setdisplayedName }) {
       <br />
 
       <Link
-        to="/productpage"
-        onClick={() => {
-          closeSidebar();
-          setdisplayedName('PRODUCT PAGE');
-        }}
-      >
-        Product Page
-      </Link>
-      <br />
-
-      <Link
         to="/checkout"
         onClick={() => {
           closeSidebar();
